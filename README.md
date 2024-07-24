@@ -1,4 +1,6 @@
 # HospitalManagement
+about this:
+The Hospital Management System is a web-based application designed to facilitate various hospital services for both patients. It offers a user-friendly interface for patients to book and cancel appointments, read about hospital services, and gain information about doctors and departments. The application utilizes HTML, CSS, and Bootstrap 5 for the front-end framework and is built using Angular for the application logic and JSON for data handling.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
