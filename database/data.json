@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "339b",
+      "username": "ashwinvijay633@gmail.com",
+      "email": "ashwinvijay633@gmail.com",
+      "pass": "123456"
+    },
+    {
+      "id": "d94b",
+      "username": "Ashwin ",
+      "email": "ramana@gmail.com",
+      "pass": "111111"
+    },
+    {
+      "id": "c4e6",
+      "username": "rajesh",
+      "email": "raj@123.com",
+      "pass": "555555"
+    },
+    {
+      "id": "8771",
+      "username": "somas",
+      "email": "som@123.com",
+      "pass": "123456"
+    },
+    {
+      "id": "7f5b",
+      "username": "as",
+      "email": "ashwin@gmail.com",
+      "pass": "123456"
+    }
+  ],
+  "apponiments": [
+    {
+      "id": "8c1b",
+      "name": "",
+      "lastname": "",
+      "emial": "",
+      "phone": "",
+      "gender": "",
+      "doctorname": "Dr. John Doe",
+      "spl": "Cardiologiy",
+      "city": ""
+    }
+  ]
+}

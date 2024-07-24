@@ -1,0 +1,467 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management</title>
+<style>
+    .navbar-brand, .nav-link {
+      color: rgb(255, 255, 255) !important;
+    }
+    .jumbotron {
+      height:auto;
+      padding: 2rem 1rem;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      text-align: center;
+    }
+#head{
+  margin-left: -30px !important;
+}
+@media screen and (max-width:900px){
+  #mainphoto{
+    width:460px!important;
+    height: auto;
+    object-fit: fill;
+
+  }
+}
+    @media screen and (max-width:785px)
+     {
+      #mainphoto{
+        width:360px!important;
+        height:auto;
+        object-fit: fill;
+
+      }
+      #head{
+        margin-left:-50px !important;
+
+      }
+    }
+  </style>
+</head>
+<body class="">
+<!-- Your content here -->
+  <nav class="navbar navbar-expand-lg   me-0 sticky-top" style="background-color: #8C3EFA;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hospital Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#doctors">Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#appointments"  data-bs-toggle="modal" data-bs-target="#myapponiment">My Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row me-0 ps-5 bg-light " id="head">
+    <div class="col-lg-6 pt-5 col-md-5 col-sm-6 ">
+      <div class="div pt-5  md-ms-2 sm-ms-1">
+        <h1 class="display-4">Welcome to Our Hospital</h1>
+        <p class="lead ms-3">Providing the best medical services for you and your family.</p>
+        <button class="btn ms-3"style="background-color: #8C3EFA;color:white;" href="#appointments" type="button" >Book Apponiment</button><br>
+      <div class="pt-3"><p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est distinctio debitis repellendus voluptatem dicta. Veritatis dolore sunt molestiae incidunt, accusamus, minus saepe cupiditate perferendis aut assumenda praesentium alias, consequuntur fuga.
+      </p><a class="btn btn-light btn-lg" href="#services" role="button">Learn More</a>
+    </div>
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-5">
+      <img src="assets/images/medical-team (1).png" alt="" id="mainphoto" class="w-auto h-auto" >
+    </div>
+  </div>
+
+
+<div class="container mt-5">
+  <!-- Services Section -->
+  <section id="services" class="">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row d-flex">
+      <div class="col-md-4 sm-mt-2">
+          <div class="card bg-light">
+            <div class="card-body d-flex">
+              <div class="col-4">
+                <img src="assets/images/heart-rate.png"  class="" style="object-fit:contain; height:110px">
+              </div>
+              <div class="col-8">
+                <h5 class="card-title">Cardiology</h5>
+                <p class="card-text">Comprehensive heart care services.</p>
+                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#cardia" >learn More</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 sm-mt-2">
+        <div class="card bg-light">
+          <div class="card-body d-flex">
+            <div class="col-4">
+              <img src="assets/images/brain.png"  class="" style="object-fit:contain; height:110px">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Neurology</h5>
+            <p class="card-text">Advanced brain and spine treatment.</p>
+            <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#ne">learn More</button>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4 sm-mt-2">
+      <div class="card bg-light">
+        <div class="card-body d-flex">
+          <div class="col-4">
+            <img src="assets/images/pediatric.png"  class="" style="object-fit:contain; height:110px">
+          </div>
+          <div class="col-8">
+            <h5 class="card-title">Pediatrics</h5>
+            <p class="card-text">Dedicated child healthcare services.</p>
+            <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#ped">learn More</button>
+
+          </div>
+        </div>
+      </div>
+  </div>
+    </div>
+    <div class="collapse collapse-vertically mt-3 " id="cardia" style="border-radius: 10px;">
+      <div class="card-head bg-secondary text-white" style="border-radius: 10px;">
+        <h1 class="ps-3">About Cardia</h1>
+      </div>
+      <div class="card card-body " style="width: 100%;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+        This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+      </div>
+    </div>
+    <!-- neuro -->
+    <div class="collapse collapse-vertically mt-3" id="ne">
+      <div class="card-head bg-secondary text-white" style="text-align: center;border-radius:10px">
+        <h1 style="align-items:center;">About Neurologist</h1>
+      </div>
+      <div class="card card-body" style="width: 100%;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+        This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+      </div>
+    </div>
+    <!-- pedia -->
+    <div class="collapse collapse-vertically mt-3" id="ped" >
+      <div class="card-head bg-secondary text-white" style="text-align:end !important;border-radius:10px"  >
+        <h1 class="pe-3">About Pediatrician</h1>
+      </div>
+      <div class="card card-body" style="width: 100%;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+        This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+      </div>
+    </div>
+  </section>
+  <!-- Doctors Section -->
+  <section id="doctors">
+    <h2 class="section-title">Meet Our Doctors</h2>
+    <div class="row">
+      <div class="col-md-3 sm-mt-2">
+        <div class="card bg-light">
+          <img src="assets/images/speech.png" class="card-img-top h-20" alt="Doctor 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Doe</h5>
+            <p class="card-text">Cardiologist</p>
+            <button class="btn btn-success" routerLink="/cardia">Meet Doctor</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 sm-mt-2">
+        <div class="card bg-light">
+          <img src="assets/images/neo.png" class="card-img-top" alt="Doctor 2">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Jane Smith</h5>
+            <p class="card-text">Neurologist</p>
+            <button class="btn btn-success" routerLink="/neuro">Meet Doctor</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 sm-mt-2">
+        <div class="card bg-light">
+          <img src="assets/images/telemedicine (1).png" class="card-img-top" alt="Doctor 3">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Mike Johnson</h5>
+            <p class="card-text">Pediatrician</p>
+            <button class="btn btn-success"  routerLink="/cardia">Meet Doctor</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 sm-mt-2">
+        <div class="card bg-light">
+          <img src="assets/images/surgeon.png" class="card-img-top" alt="Doctor 4">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Emily Brown</h5>
+            <p class="card-text">Surgeon</p>
+            <button class="btn btn-success"  routerLink="/neuro">Meet Doctor</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Appointments Section -->
+
+  <section id="appointments" class="">
+    <h2 class="section-title">Book an Appointment</h2>
+    <form #apponment="ngForm" (ngSubmit)="apponment.form.valid && fixapponiment(apponment) ;">
+      <!-- name -->
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" #name="ngModel"
+         [ngClass]="{'is-invalid':apponment.submitted && name.invalid,'is-valid':apponment.submitted && name.valid  }"name="name" placeholder="name@example.com" [(ngModel)]="appoinment.name"   required>
+        <label for="floatingInput">Name</label>
+        <div class="invalid-feedback">
+          <div *ngIf="e.errors?.['required']">
+            Please Enter your name
+          </div>
+        </div>
+      </div>
+      <!-- email -->
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" #e="ngModel"
+         [ngClass]="{'is-invalid':apponment.submitted && e.invalid,'is-valid':apponment.submitted && e.valid  }"name="email" placeholder="name@example.com" [(ngModel)]="appoinment.emali"  email required>
+        <label for="floatingInput">Email address</label>
+        <div class="invalid-feedback">
+          <div *ngIf="e.errors?.['required']">
+            email required
+          </div>
+          <div *ngIf="e.errors?.['email']"> email must be valid</div>
+        </div>
+      </div>
+      <!-- phone -->
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" #phone="ngModel"  pattern="[0-9]{10}"
+         [ngClass]="{'is-invalid':apponment.submitted && phone.invalid,'is-valid':apponment.submitted && phone.valid  }"name="phone" placeholder="01234567" [(ngModel)]="appoinment.phone"   required>
+        <label for="floatingInput">Phone</label>
+        <div class="invalid-feedback">
+          <div *ngIf="phone.errors?.['required']">
+            Please Enter your Phone Number
+          </div>
+          <div *ngIf="phone.errors?.['pattern']">
+            Phone Number Must be 10 Digits
+          </div>
+        </div>
+      </div>
+      <!-- date -->
+      <div class="form-floating mb-3">
+        <input type="date" class="form-control" #date="ngModel"
+         [ngClass]="{'is-invalid':apponment.submitted && date.invalid,'is-valid':apponment.submitted && date.valid  }"name="date" placeholder="12/12/12" [(ngModel)]="appoinment.date"   required>
+        <label for="floatingInput">date</label>
+        <div class="invalid-feedback">
+          <div *ngIf="date.errors?.['required']">
+            Select Date
+          </div>
+        </div>
+      </div>
+      <!-- age -->
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" #age="ngModel"
+         [ngClass]="{'is-invalid':apponment.submitted && age.invalid,'is-valid':apponment.submitted && age.valid  }"name="age" placeholder="" [(ngModel)]="appoinment.age"   required>
+        <label for="floatingInput">age</label>
+        <div class="invalid-feedback">
+          <div *ngIf="age.errors?.['required']">
+            Enter your age
+          </div>
+        </div>
+      </div>
+      <!-- gender -->
+      <div class="mb-3">
+        <label for="age" class="form-label">gender</label>
+        <select class="form-select"name="gender" #gender="ngModel" [(ngModel)]="appoinment.gender"
+        [ngClass]="{'is-invalid':apponment.submitted && gender.invalid,'is-valid':apponment.submitted && gender.valid  }"name="gender" placeholder="" [(ngModel)]="appoinment.gender"   required >
+          <option selected>Gender</option>
+          <option >Male</option>
+          <option>Female</option>
+        </select>
+        <div class="invalid-feedback">
+          <div *ngIf="gender.errors?.['required']">
+            Select your gender
+          </div>
+        </div>
+      </div>
+      <!-- doctor  -->
+      <div class="mb-3">
+        <label for="age" class="form-label">Doctorname</label>
+        <select class="form-select"name="Doctorname" #doctorname="ngModel" [(ngModel)]="appoinment.doctorname"
+        [ngClass]="{'is-invalid':apponment.submitted && doctorname.invalid,'is-valid':apponment.submitted && doctorname.valid  }"name="doctorname" placeholder="" [(ngModel)]="appoinment.doctorname"   required>
+          <option selected>Doctor's</option>
+          <option>Dr. Jane Smith</option>
+          <option>Dr. Emily Brown</option>
+          <option>Dr. Jhon Deo</option>
+        </select>
+        <div class="invalid-feedback">
+          <div *ngIf="doctorname.errors?.['required']">
+            Select Consult Doctor
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="age" class="form-label">Address</label>
+        <textarea type="address"class="form-control" name="address" rows="3" #address="ngModel"[(ngModel)]="appoinment.address" ></textarea>
+      </div>
+      <button type="submit" class="btn" style="background-color: #8C3EFA;color:white" (click)="load()">Submit</button>
+      <div class="spinner-border text-primary" role="status" *ngIf="loading">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </form>
+  </section>
+  <!-- my apponiments -->
+
+<div class="modal fade" id="myapponiment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" >
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myapponiment">My Apponiment</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div *ngIf="list.length>0 then pcode else fcode"> </div>
+            <ng-template #pcode>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>sno</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>doctor</th>
+                    <th>date</th>
+                  </tr>
+                </thead>
+
+              <tbody>
+              <tr *ngFor="let item of list;let i=index">
+                <td>{{  i+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.doctorname}}</td>
+                <td>{{item.date}}</td>
+                <td>
+                  <span><button class="btn" data-bs-target="#edit" data-bs-toggle="modal" (click)="edit(item.id)"><img src="assets/images/pen.png" style="width:30px;height:30px"></button>&nbsp;
+                    <button class="btn btn-danger"(click)="cancleappoiment(item.id)">cancle apponiment
+                    </button>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+            </ng-template>
+
+
+            <ng-template #fcode> <h1 style="text-align: center;">No Apponiment yet.. &#128516;</h1>
+
+            </ng-template>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--edit-->
+<div class="modal fade modal-lg" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Details</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-"> <img src="a" alt="" class="img-fluid"></div>
+          <div class="col-12">
+            <!-- form -->
+            <form class="row g-3"#edi="ngForm" (ngSubmit)="update(editdata.id,editdata)">
+              <div class="col-md-6">
+
+                <input type="text" class="form-control" placeholder="name" name="name" #name="ngModel" [(ngModel)]="editdata.name">
+              </div>
+              <div class="col-md-6">
+
+                <input type="text" class="form-control" name="lastname" placeholder="lastname" #lastname="ngModel" [(ngModel)]="editdata.lastname">
+              </div>
+              <div class="col-md-12">
+
+                <input type="email" class="form-control" name="email" placeholder="email" #email="ngModel" [(ngModel)]="editdata.email" email required>
+              </div>
+              <div class="col-md-12">
+
+                <input type="number" class="form-control" name="phone" placeholder="phone" #ephone="ngModel"[(ngModel)]="editdata.phone">
+              </div>
+              <div class="col-md-12">
+                <select class="form-select"name="gender" #gender="ngModel" [(ngModel)]="editdata.gender">
+                  <option selected>Gender</option>
+                  <option >Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="col-md-12">
+                <label for="inputCity" class="form-label">Date</label>
+                <input type="date" class="form-control" name="date" #date="ngModel" [(ngModel)]="editdata.date">
+              </div>
+
+              <div class="col-md-6">
+                <label for="lastname" class="form-label">Doctor Name</label>
+                <input type="text" class="form-control" name="doctorname" value="Dr. John Doe" disabled #value="ngModel" [(ngModel)]="editdata.doctorname">
+              </div>
+              <div class="col-md-6">
+                <label for="lastname" class="form-label">Specilization</label>
+                <input type="text" class="form-control" name="spl" value="Cardiologiy" disabled #spl="ngModel" [(ngModel)]="editdata.spl">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" name="city" #city="ngModel" [(ngModel)]="editdata.city">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">update </button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="mt-5">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Address: 123 Main Street, City, Country</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Email:infohospital.com</p>
+  </section>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer text-light"style="background-color: #8C3EFA;">
+  <p>&copy; 2024 Hospital Management. All rights reserved.</p>
+</footer>
+
+
+

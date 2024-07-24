@@ -1,0 +1,259 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1 class="ms-4">Cardiology</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="assets/images/doctor.png" class="img" alt="Dr. Smith" style="height: 400px; width:80%">
+            </div>
+            <div class="col-md-6">
+                <h1>About Dr. John Doe</h1>
+                <p>Dr. John Doe is a board-certified cardiologist with over 20 years of experience. He is dedicated to providing the highest quality of care to his patients, specializing in the diagnosis and treatment of heart diseases.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis qui commodi, unde doloremque alias pariatur aperiam sit, sunt iste quae ipsum dolorem nostrum reprehenderit temporibus, voluptates quaerat corrupti officiis ipsa?</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cardia">
+                  Make An apponiment
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- apponiment -->
+    <div class="modal fade modal-lg" id="Cardia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Cardiologist</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-4"> <img src="assets/images/medical-report.png" alt="" class="img-fluid"></div>
+              <div class="col-7">
+                <!-- form -->
+                <form class="row g-3"#cardio="ngForm" (ngSubmit)="submit()">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" #name="ngModel"
+                    [ngClass]="{'is-invalid':cardio.submitted && name.invalid,'is-valid':cardio.submitted && name.valid  }"name="name" placeholder="name@example.com" [(ngModel)]="patient.name"   required>
+                   <label for="floatingInput">Name</label>
+                   <div class="invalid-feedback">
+                     <div *ngIf="name.errors?.['required']">
+                       Please Enter your name
+                     </div>
+                   </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="lastname" placeholder="lastname" #lastname="ngModel" [(ngModel)]="patient.lastname">
+                  </div>
+                  <!-- email -->
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" #e="ngModel"
+                    [ngClass]="{'is-invalid':cardio.submitted && e.invalid,'is-valid':cardio.submitted && e.valid  }"name="email" placeholder="name@example.com" [(ngModel)]="patient.emali"  email required>
+                   <label for="floatingInput">Email address</label>
+                   <div class="invalid-feedback">
+                     <div *ngIf="e.errors?.['required']">
+                       email required
+                     </div>
+                     <div *ngIf="e.errors?.['email']"> email must be valid</div>
+                   </div>
+                    <input type="email" class="form-control" name="email" placeholder="email" #email="ngModel" [(ngModel)]="patient.email">
+                  </div>
+                  <!-- phone -->
+                  <div class="col-md-12">
+                    <input type="number" class="form-control" #phone="ngModel"  pattern="[0-9]{10}"
+                    [ngClass]="{'is-invalid':cardio.submitted && phone.invalid,'is-valid':cardio.submitted && phone.valid  }"name="phone" placeholder="01234567" [(ngModel)]="patient.phone"   required>
+                   <label for="floatingInput">Phone</label>
+                   <div class="invalid-feedback">
+                     <div *ngIf="phone.errors?.['required']">
+                       Please Enter your Phone Number
+                     </div>
+                     <div *ngIf="phone.errors?.['pattern']">
+                       Phone Number Must be 10 Digits
+                     </div>
+                   </div>
+                  </div>
+                  <!-- gender -->
+                  <div class="col-md-12">
+                    <label for="age" class="form-label">gender</label>
+                    <select class="form-select"name="gender" #gender="ngModel" [(ngModel)]="patient.gender"
+                    [ngClass]="{'is-invalid':cardio.submitted && gender.invalid,'is-valid':cardio.submitted && gender.valid  }"name="gender" placeholder="" [(ngModel)]="patient.gender"   required >
+                      <option selected>Gender</option>
+                      <option >Male</option>
+                      <option>Female</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      <div *ngIf="gender.errors?.['required']">
+                        Select your gender
+                      </div>
+                    </div>
+                  </div>
+                  <!-- date -->
+                  <div class="col-md-12">
+                    <label for="inputCity" class="form-label">Date</label>
+                    <input type="date" class="form-control" name="date" #date="ngModel" [(ngModel)]="patient.date">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="lastname" class="form-label">Doctor Name</label>
+                    <input type="text" class="form-control" name="doctorname" value="Dr. John Doe" disabled #value="ngModel" [(ngModel)]="patient.doctorname">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastname" class="form-label">Specilization</label>
+                    <input type="text" class="form-control" name="spl" value="neurologist" disabled #spl="ngModel" [(ngModel)]="patient.spl">
+                  </div>
+
+                  <div class="col-12">
+                    <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Book Apponiment
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loaad"></span>
+                      <span class="visually-hidden">Loading...</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                  <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#cardia">
+                    <div class="card">
+                        <div class="card-body">
+                          <img src="assets/images/online-consultation.png"class="h-50 w-50" alt="">
+                            <h5 class="card-title">Cardiac Consultation</h5>
+                            <p class="card-text">Comprehensive evaluations and personalized treatment plans.</p>
+                        </div>
+                    </div>
+                    <div style=" width:100% ">
+                      <div class="collapse collapse-vertically" id="cardia">
+                        <div class="card card-body" style="width: 100%;">
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+                          This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#eco">
+                    <div class="card">
+                        <div class="card-body">
+                          <img src="assets/images/echocardiogram.png"class="h-50 w-50" alt="">
+                            <h5 class="card-title">Echocardiogram</h5>
+                            <p class="card-text">Advanced imaging to assess heart function and structure.</p>
+                        </div>
+                    </div>
+                    <div style="width:100% ">
+                      <div class="collapse collapse-vertically" id="eco">
+                        <div class="card card-body" style="width: 100%;">
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+                          This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#stress">
+                    <div class="card">
+                        <div class="card-body">
+                          <img src="assets/images/fear.png"class="h-50 w-50" alt="">
+                            <h5 class="card-title">Stress Testing</h5>
+                            <p class="card-text">Comprehensive evaluations and personalized treatment plans.</p>
+                        </div>
+                    </div>
+                    <div style="min-height:120px; width:100% ">
+                      <div class="collapse collapse-vertically" id="stress">
+                        <div class="card card-body" style="width: 100%;">
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dol repellendus dicta. Ut aliquam error exercitationem magni recusandae modi impedit corporis nobis, eveniet fugit. Velit veniam, suscipit, et quia corrupti natus veritatis voluptates neque repudiandae, iste ipsa hic laudantium iusto omnis cupiditate vel quibusdam. Aliquam sequi aspernatur eius ex rerum hic asperiores sit, reiciendis totam pariatur cum dolore omnis dicta neque minus quod nisi soluta excepturi libero quidem tempora aperiam placeat iure. Quia tenetur repellendus omnis libero eligendi?</p>
+                          This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container my-5">
+        <h2 class="text-center">Patient Testimonials</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Dr.Jhon Doe saved my life! His expertise and care are unparalleled." - John Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"I trust Dr. Jhone Deo with my heart health completely." - Jane Roe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Dr. Jhon Deo Cardiology Practice. All rights reserved.</p>
+    </footer>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+</body>
