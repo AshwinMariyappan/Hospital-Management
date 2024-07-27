@@ -77,7 +77,7 @@
       <div class="div pt-5  md-ms-2 sm-ms-1">
         <h1 class="display-4">Welcome to Our Hospital</h1>
         <p class="lead ms-3">Providing the best medical services for you and your family.</p>
-        <button class="btn ms-3"style="background-color: #8C3EFA;color:white;" href="#appointments" type="button" >Book Apponiment</button><br>
+        <a class="btn ms-3"style="background-color: #8C3EFA;color:white;" href="#appointments" type="button" >Book Apponiment</a><br>
       <div class="pt-3"><p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est distinctio debitis repellendus voluptatem dicta. Veritatis dolore sunt molestiae incidunt, accusamus, minus saepe cupiditate perferendis aut assumenda praesentium alias, consequuntur fuga.
       </p><a class="btn btn-light btn-lg" href="#services" role="button">Learn More</a>
     </div>
@@ -197,7 +197,7 @@
       </div>
       <div class="col-md-3 sm-mt-2">
         <div class="card bg-light">
-          <img src="assets/images/telemedicine (1).png" class="card-img-top" alt="Doctor 3">
+          <img src="assets/images/speech.png" class="card-img-top" alt="Doctor 3">
           <div class="card-body">
             <h5 class="card-title">Dr. Mike Johnson</h5>
             <p class="card-text">Pediatrician</p>
@@ -219,11 +219,11 @@
   </section>
   <!-- Appointments Section -->
 
-  <section id="appointments" class="">
+  <section class="">
     <h2 class="section-title">Book an Appointment</h2>
     <form #apponment="ngForm" (ngSubmit)="apponment.form.valid && fixapponiment(apponment) ;">
       <!-- name -->
-      <div class="form-floating mb-3">
+      <div class="form-floating mb-3"  id="appointments">
         <input type="text" class="form-control" #name="ngModel"
          [ngClass]="{'is-invalid':apponment.submitted && name.invalid,'is-valid':apponment.submitted && name.valid  }"name="name" placeholder="name@example.com" [(ngModel)]="appoinment.name"   required>
         <label for="floatingInput">Name</label>
